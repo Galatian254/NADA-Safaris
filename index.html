@@ -17,7 +17,7 @@
         "name": "Nada Afrika Safaris",
         "description": "Mindful safari adventures across Africa. Game drives, cultural encounters, luxury getaways.",
         "url": "logo.jpeg",
-        "logo": "logo.jpeg",
+        "logo": "https://nadaafrikasafaris.com/logo.jpeg",
         "contactPoint": {
             "@type": "ContactPoint",
             "telephone": "+254-788-273-606",
@@ -826,7 +826,7 @@
             background-position: 50% 50%;
             background-size: cover;
             display: inline-block;
-            transition: all 0.5s;
+            transition: all 0.05s;
             cursor: pointer;
         }
 
@@ -839,7 +839,7 @@
             width: 100%;
             height: 100%;
             border-radius: 20px;
-            transition: all .1s;
+            transition: all .05s;
         }
 
         .destinations-slider .item:nth-child(3) {
@@ -861,6 +861,22 @@
         .destinations-slider .item .content .des {
             opacity: 1 !important;
             animation: none !important;
+        }
+
+        .destinations-slider .content .name {
+            font-size: 2rem;
+            line-height: 1.1;
+            overflow-wrap: break-word;
+        }
+
+        .destinations-slider .content .des {
+            line-height: 1.4;
+        }
+
+        .destinations-slider .content .price {
+            color: var(--extra-light);
+            margin-bottom: 1rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
 
         /* ===== CUSTOMISED PACKAGES SECTION ===== */
@@ -1094,7 +1110,7 @@
             background-position: 50% 50%;
             background-size: cover;
             display: inline-block;
-            transition: all 0.5s;
+            transition: all 0.05s;
             cursor: pointer;
         }
 
@@ -1107,7 +1123,7 @@
             width: 100%;
             height: 100%;
             border-radius: 20px;
-            transition: all .5s;
+            transition: all .05s;
         }
 
         .gallery-slider .item:nth-child(3) {
@@ -1917,6 +1933,14 @@
                 font-size: 1rem;
             }
 
+            .destinations-slider .content .name {
+                font-size: 1.45rem;
+            }
+
+            .destinations-slider .content .des {
+                font-size: 0.9rem;
+            }
+
             .slider-button button {
                 width: 40px;
                 height: 40px;
@@ -2105,6 +2129,14 @@
             .content .des {
                 font-size: 0.8rem;
             }
+
+            .destinations-slider .content .name {
+                font-size: 1.05rem;
+            }
+
+            .destinations-slider .content .des {
+                display: none;
+            }
         }
 
         @media (max-width: 400px) {
@@ -2131,6 +2163,10 @@
             .content button {
                 padding: 6px 12px;
                 font-size: 0.8rem;
+            }
+
+            .destinations-slider .content .name {
+                font-size: 0.95rem;
             }
         }
     </style>
@@ -2249,58 +2285,90 @@
             <div class="section-header">
                 <h2 class="section-title">Explore Top <span>Destinations</span></h2>
                 <p class="section-subtitle">
-                    Experience Africa's most beautiful places through our interactive destination slider
+                    Explore Nada Afrika Safaris' latest curated trips and group experiences
                 </p>
             </div>
 
             <div class="destinations-slider-container">
                 <div class="destinations-slider">
-                    <div class="item" style="background-image: url('mambrui_sand_dunes.jpeg')">
+                    <div class="item" style="background-image: url('https://source.unsplash.com/featured/1600x1000/?mombasa,yacht,party')">
                         <div class="content">
-                            <div class="name">Mambrui Sand Dunes</div>
-                            <div class="des">Experience the mystical sand dunes under twilight skies and misty lochs.</div>
-                            <div class="price">From Ksh 156,000</div>
-                            <button class="book-now-btn" data-service="Destination" data-name="Mambrui Sand Dunes" data-price="156000">Book Now</button>
+                            <div class="name">Mombasa Yacht Party</div>
+                            <div class="des">Cruise the coast with music, sea breeze, and golden-hour ocean views.</div>
+                            <div class="price">From Ksh 11,599</div>
+                            <button class="book-now-btn" data-service="Destination" data-name="Mombasa Yacht Party" data-price="11599">Book Now</button>
                         </div>
                     </div>
-                    <div class="item" style="background-image: url('lake_naivasha.jpg')">
+                    <div class="item" style="background-image: url('https://source.unsplash.com/featured/1600x1000/?forest,swing,adventure,bootcamp')">
                         <div class="content">
-                            <div class="name">Lake Naivasha</div>
-                            <div class="des">Chase the thrill of adventure's wildlife along scenic view of the lake.</div>
-                            <div class="price">From Ksh 195,000</div>
-                            <button class="book-now-btn" data-service="Destination" data-name="Lake Naivasha" data-price="195000">Book Now</button>
+                            <div class="name">Njine Kabia Wild Swing and Bootcamp</div>
+                            <div class="des">Take on wild swing thrills, outdoor drills, and bootcamp team energy.</div>
+                            <div class="price">From Ksh 5,499</div>
+                            <button class="book-now-btn" data-service="Destination" data-name="Njine Kabia Wild Swing and Bootcamp" data-price="5499">Book Now</button>
                         </div>
                     </div>
-                    <div class="item" style="background-image: url('amboseli_national_park.jpg')">
+                    <div class="item" style="background-image: url('https://source.unsplash.com/featured/1600x1000/?samburu,buffalo,safari')">
                         <div class="content">
-                            <div class="name">Amboseli National Park</div>
-                            <div class="des">Wander dramatic, mist-laden mountain paths that feel straight out of a dream.</div>
-                            <div class="price">From Ksh 260,000</div>
-                            <button class="book-now-btn" data-service="Destination" data-name="Amboseli National Park" data-price="260000">Book Now</button>
+                            <div class="name">Samburu Buffalo Spring</div>
+                            <div class="des">Safari through Samburu landscapes and the wildlife-rich Buffalo Springs reserve.</div>
+                            <div class="price">From Ksh 9,999</div>
+                            <button class="book-now-btn" data-service="Destination" data-name="Samburu Buffalo Spring" data-price="9999">Book Now</button>
                         </div>
                     </div>
-                    <div class="item" style="background-image: url('Diani_Beach.jpg')">
+                    <div class="item" style="background-image: url('https://source.unsplash.com/featured/1600x1000/?nanyuki,mount-kenya,football')">
                         <div class="content">
-                            <div class="name">Diani Beach</div>
-                            <div class="des">Enjoy the sandy beaches and blue waters in dusk and ancient forest trails.</div>
-                            <div class="price">From Ksh 234,000</div>
-                            <button class="book-now-btn" data-service="Destination" data-name="Diani Beach" data-price="234000">Book Now</button>
+                            <div class="name">Nanyuki Jersey Edition</div>
+                            <div class="des">Road-trip to Nanyuki with match-day fits and Mount Kenya views.</div>
+                            <div class="price">From Ksh 4,599</div>
+                            <button class="book-now-btn" data-service="Destination" data-name="Nanyuki Jersey Edition" data-price="4599">Book Now</button>
                         </div>
                     </div>
-                    <div class="item" style="background-image: url('Lamu_Island_Shela.avif')">
+                    <div class="item" style="background-image: url('https://source.unsplash.com/featured/1600x1000/?watamu,malindi,beach,road-trip')">
                         <div class="content">
-                            <div class="name">Lamu Island</div>
-                            <div class="des">Explore the breathtaking beauty of Shela and the diverse Swahili culture in Lamu.</div>
-                            <div class="price">From Ksh 182,000</div>
-                            <button class="book-now-btn" data-service="Destination" data-name="Lamu Island" data-price="182000">Book Now</button>
+                            <div class="name">Watamu and Malindi Road Trip</div>
+                            <div class="des">Follow the coast through Watamu beaches, Malindi stops, and Swahili charm.</div>
+                            <div class="price">From Ksh 21,999</div>
+                            <button class="book-now-btn" data-service="Destination" data-name="Watamu and Malindi Road Trip" data-price="21999">Book Now</button>
                         </div>
                     </div>
-                    <div class="item" style="background-image: url('Maasai_Mara_National_Reserve.jpg')">
+                    <div class="item" style="background-image: url('https://source.unsplash.com/featured/1600x1000/?castle,royal,garden')">
                         <div class="content">
-                            <div class="name">Maasai Mara</div>
-                            <div class="des">Experience breathtaking views of wild beast migration and The Big 5.</div>
-                            <div class="price">From Ksh 208,000</div>
-                            <button class="book-now-btn" data-service="Destination" data-name="Maasai Mara National Reserve" data-price="208000">Book Now</button>
+                            <div class="name">Tafaria Castle Royal Edition</div>
+                            <div class="des">Enjoy a regal day out with castle-style views and royal photo moments.</div>
+                            <div class="price">From Ksh 5,999</div>
+                            <button class="book-now-btn" data-service="Destination" data-name="Tafaria Castle Royal Edition" data-price="5999">Book Now</button>
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url('https://source.unsplash.com/featured/1600x1000/?friends,music,party')">
+                        <div class="content">
+                            <div class="name">Gen Z vs Millennial Hangout</div>
+                            <div class="des">A playful social hangout for games, music, friendly rivalry, and memories.</div>
+                            <div class="price">From Ksh 4,999</div>
+                            <button class="book-now-btn" data-service="Destination" data-name="Gen Z vs Millennial Hangout" data-price="4999">Book Now</button>
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url('https://source.unsplash.com/featured/1600x1000/?namanga,kenya,road-trip')">
+                        <div class="content">
+                            <div class="name">Namanga Jersey Edition</div>
+                            <div class="des">Border-town adventure with jersey energy, road-trip stops, and big-sky views.</div>
+                            <div class="price">From Ksh 3,999</div>
+                            <button class="book-now-btn" data-service="Destination" data-name="Namanga Jersey Edition" data-price="3999">Book Now</button>
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url('https://source.unsplash.com/featured/1600x1000/?shooting-range,target')">
+                        <div class="content">
+                            <div class="name">Shooting Range</div>
+                            <div class="des">Guided target-practice experience with safety, focus, and adrenaline.</div>
+                            <div class="price">From Ksh 9,999</div>
+                            <button class="book-now-btn" data-service="Destination" data-name="Shooting Range" data-price="9999">Book Now</button>
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url('https://source.unsplash.com/featured/1600x1000/?go-kart,racing')">
+                        <div class="content">
+                            <div class="name">Kartz Bitz Edition</div>
+                            <div class="des">Fast laps, friendly rivalry, and go-kart racing energy for the crew.</div>
+                            <div class="price">From Ksh 4,999</div>
+                            <button class="book-now-btn" data-service="Destination" data-name="Kartz Bitz Edition" data-price="4999">Book Now</button>
                         </div>
                     </div>
                 </div>
@@ -2316,115 +2384,179 @@
     <section class="section" id="packages">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Best Safari <span>Packages</span></h2>
+                <h2 class="section-title">Featured <span>Trips</span></h2>
                 <p class="section-subtitle">
-                    Explore your suitable and dream places around Africa. Here you can find your right destination.
+                    Choose your next Nada Afrika experience from our latest destination lineup.
                 </p>
             </div>
 
             <div class="packages-grid">
                 <div class="package-card card">
-                    <img src="Karura_Forest.jpg" alt="Karura Forest" class="card-img" loading="lazy">
+                    <img src="https://source.unsplash.com/featured/900x600/?mombasa,yacht,party" alt="Mombasa Yacht Party" class="card-img" loading="lazy">
                     <div class="package-info">
-                        <h3 class="package-title">Karura Forest</h3>
-                        <div class="package-rating">
-                            <i class="ri-star-fill"></i> 4.2
-                        </div>
-                        <div class="package-price">
-                            <div class="price">
-                                <span>From</span> Ksh 39,000
-                            </div>
-                            <button class="btn book-now-btn" data-service="Package" data-name="Karura Forest" data-price="39000">Book Now</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="package-card card">
-                    <img src="Hell's_Gate_National_Park.webp" alt="Hell's Gate National Park" class="card-img" loading="lazy">
-                    <div class="package-info">
-                        <h3 class="package-title">Hell's Gate, Nakuru</h3>
-                        <div class="package-rating">
-                            <i class="ri-star-fill"></i> 4.5
-                        </div>
-                        <div class="package-price">
-                            <div class="price">
-                                <span>From</span> Ksh 58,500
-                            </div>
-                            <button class="btn book-now-btn" data-service="Package" data-name="Hell's Gate National Park" data-price="58500">Book Now</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="package-card card">
-                    <img src="Aberdare_forest_national_park.jpeg" alt="Aberdare National Park" class="card-img">
-                    <div class="package-info">
-                        <h3 class="package-title">Aberdares National Park</h3>
-                        <div class="package-rating">
-                            <i class="ri-star-fill"></i> 4.7
-                        </div>
-                        <div class="package-price">
-                            <div class="price">
-                                <span>From</span> Ksh 52,000
-                            </div>
-                            <button class="btn book-now-btn" data-service="Package" data-name="Aberdares National Park" data-price="52000">Book Now</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Additional Packages (Hidden by default) -->
-            <div class="additional-packages" id="additionalPackages">
-                <div class="package-card card">
-                    <img src="Menengai_Crater.jpg" alt="Menengai Crater" class="card-img">
-                    <div class="package-info">
-                        <h3 class="package-title">Menengai Crater</h3>
+                        <h3 class="package-title">Mombasa Yacht Party</h3>
                         <div class="package-rating">
                             <i class="ri-star-fill"></i> 4.8
                         </div>
                         <div class="package-price">
                             <div class="price">
-                                <span>From</span> Ksh 71,500
+                                <span>From</span> Ksh 11,599
                             </div>
-                            <button class="btn book-now-btn" data-service="Package" data-name="Menengai Crater" data-price="71500">Book Now</button>
+                            <button class="btn book-now-btn" data-service="Package" data-name="Mombasa Yacht Party" data-price="11599">Book Now</button>
                         </div>
                     </div>
                 </div>
 
                 <div class="package-card card">
-                    <img src="lake_naivasha.jpg" alt="Naivasha" class="card-img">
+                    <img src="https://source.unsplash.com/featured/900x600/?forest,swing,adventure,bootcamp" alt="Njine Kabia Wild Swing and Bootcamp" class="card-img" loading="lazy">
                     <div class="package-info">
-                        <h3 class="package-title">Lake Naivasha, Naivasha</h3>
+                        <h3 class="package-title">Njine Kabia Wild Swing and Bootcamp</h3>
                         <div class="package-rating">
                             <i class="ri-star-fill"></i> 4.6
                         </div>
                         <div class="package-price">
                             <div class="price">
-                                <span>From</span> Ksh 45,500
+                                <span>From</span> Ksh 5,499
                             </div>
-                            <button class="btn book-now-btn" data-service="Package" data-name="Lake Naivasha,Naivasha" data-price="45500">Book Now</button>
+                            <button class="btn book-now-btn" data-service="Package" data-name="Njine Kabia Wild Swing and Bootcamp" data-price="5499">Book Now</button>
                         </div>
                     </div>
                 </div>
 
                 <div class="package-card card">
-                    <img src="Diani_Beach.jpg" alt="Diani" class="card-img">
+                    <img src="https://source.unsplash.com/featured/900x600/?samburu,buffalo,safari" alt="Samburu Buffalo Spring" class="card-img" loading="lazy">
                     <div class="package-info">
-                        <h3 class="package-title">Diani Beach</h3>
+                        <h3 class="package-title">Samburu Buffalo Spring</h3>
                         <div class="package-rating">
                             <i class="ri-star-fill"></i> 4.9
                         </div>
                         <div class="package-price">
                             <div class="price">
-                                <span>From</span> Ksh 78,000
+                                <span>From</span> Ksh 9,999
                             </div>
-                            <button class="btn book-now-btn" data-service="Package" data-name="Diani Beach" data-price="78000">Book Now</button>
+                            <button class="btn book-now-btn" data-service="Package" data-name="Samburu Buffalo Spring" data-price="9999">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Trips (Hidden by default) -->
+            <div class="additional-packages" id="additionalPackages">
+                <div class="package-card card">
+                    <img src="https://source.unsplash.com/featured/900x600/?nanyuki,mount-kenya,football" alt="Nanyuki Jersey Edition" class="card-img" loading="lazy">
+                    <div class="package-info">
+                        <h3 class="package-title">Nanyuki Jersey Edition</h3>
+                        <div class="package-rating">
+                            <i class="ri-star-fill"></i> 4.7
+                        </div>
+                        <div class="package-price">
+                            <div class="price">
+                                <span>From</span> Ksh 4,599
+                            </div>
+                            <button class="btn book-now-btn" data-service="Package" data-name="Nanyuki Jersey Edition" data-price="4599">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card card">
+                    <img src="https://source.unsplash.com/featured/900x600/?watamu,malindi,beach,road-trip" alt="Watamu and Malindi Road Trip" class="card-img" loading="lazy">
+                    <div class="package-info">
+                        <h3 class="package-title">Watamu and Malindi Road Trip</h3>
+                        <div class="package-rating">
+                            <i class="ri-star-fill"></i> 4.9
+                        </div>
+                        <div class="package-price">
+                            <div class="price">
+                                <span>From</span> Ksh 21,999
+                            </div>
+                            <button class="btn book-now-btn" data-service="Package" data-name="Watamu and Malindi Road Trip" data-price="21999">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card card">
+                    <img src="https://source.unsplash.com/featured/900x600/?castle,royal,garden" alt="Tafaria Castle Royal Edition" class="card-img" loading="lazy">
+                    <div class="package-info">
+                        <h3 class="package-title">Tafaria Castle Royal Edition</h3>
+                        <div class="package-rating">
+                            <i class="ri-star-fill"></i> 4.8
+                        </div>
+                        <div class="package-price">
+                            <div class="price">
+                                <span>From</span> Ksh 5,999
+                            </div>
+                            <button class="btn book-now-btn" data-service="Package" data-name="Tafaria Castle Royal Edition" data-price="5999">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card card">
+                    <img src="https://source.unsplash.com/featured/900x600/?friends,music,party" alt="Gen Z vs Millennial Hangout" class="card-img" loading="lazy">
+                    <div class="package-info">
+                        <h3 class="package-title">Gen Z vs Millennial Hangout</h3>
+                        <div class="package-rating">
+                            <i class="ri-star-fill"></i> 4.7
+                        </div>
+                        <div class="package-price">
+                            <div class="price">
+                                <span>From</span> Ksh 4,999
+                            </div>
+                            <button class="btn book-now-btn" data-service="Package" data-name="Gen Z vs Millennial Hangout" data-price="4999">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card card">
+                    <img src="https://source.unsplash.com/featured/900x600/?namanga,kenya,road-trip" alt="Namanga Jersey Edition" class="card-img" loading="lazy">
+                    <div class="package-info">
+                        <h3 class="package-title">Namanga Jersey Edition</h3>
+                        <div class="package-rating">
+                            <i class="ri-star-fill"></i> 4.6
+                        </div>
+                        <div class="package-price">
+                            <div class="price">
+                                <span>From</span> Ksh 3,999
+                            </div>
+                            <button class="btn book-now-btn" data-service="Package" data-name="Namanga Jersey Edition" data-price="3999">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card card">
+                    <img src="https://source.unsplash.com/featured/900x600/?shooting-range,target" alt="Shooting Range" class="card-img" loading="lazy">
+                    <div class="package-info">
+                        <h3 class="package-title">Shooting Range</h3>
+                        <div class="package-rating">
+                            <i class="ri-star-fill"></i> 4.8
+                        </div>
+                        <div class="package-price">
+                            <div class="price">
+                                <span>From</span> Ksh 9,999
+                            </div>
+                            <button class="btn book-now-btn" data-service="Package" data-name="Shooting Range" data-price="9999">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card card">
+                    <img src="https://source.unsplash.com/featured/900x600/?go-kart,racing" alt="Kartz Bitz Edition" class="card-img" loading="lazy">
+                    <div class="package-info">
+                        <h3 class="package-title">Kartz Bitz Edition</h3>
+                        <div class="package-rating">
+                            <i class="ri-star-fill"></i> 4.7
+                        </div>
+                        <div class="package-price">
+                            <div class="price">
+                                <span>From</span> Ksh 4,999
+                            </div>
+                            <button class="btn book-now-btn" data-service="Package" data-name="Kartz Bitz Edition" data-price="4999">Book Now</button>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="text-center" style="margin-top: 3rem;">
-                <button class="btn btn-outline" id="viewPackagesBtn">View All Packages</button>
+                <button class="btn btn-outline" id="viewPackagesBtn">View All Trips</button>
             </div>
         </div>
     </section>
@@ -3046,7 +3178,7 @@
                         </div>
                     </div>
                     <p class="review-text">
-                        "The safari to Maasai Mara was absolutely amazing! Everything was perfectly organized, and the guides were knowledgeable and friendly. I'll definitely book with Nada Afrika Safaris again!"
+                        "The Samburu Buffalo Spring trip was absolutely amazing! Everything was perfectly organized, and the guides were knowledgeable and friendly. I'll definitely book with Nada Afrika Safaris again!"
                     </p>
                 </div>
 
@@ -3065,7 +3197,7 @@
                         </div>
                     </div>
                     <p class="review-text">
-                        "Our family vacation to Diani Beach was unforgettable. The accommodations were excellent, and the activities were well-planned. The kids loved every moment. Highly recommended!"
+                        "Our Watamu and Malindi Road Trip was unforgettable. The stops were excellent, and the activities were well-planned. The kids loved every moment. Highly recommended!"
                     </p>
                 </div>
 
@@ -3084,7 +3216,7 @@
                         </div>
                     </div>
                     <p class="review-text">
-                        "I've traveled with many agencies, but Nada Afrika Safaris stands out. Their attention to detail and customer service is exceptional. The Amboseli trip was a dream come true!"
+                        "I've traveled with many agencies, but Nada Afrika Safaris stands out. Their attention to detail and customer service is exceptional. The Mombasa Yacht Party was a dream come true!"
                     </p>
                 </div>
             </div>
@@ -3281,20 +3413,16 @@
         // ==================== SEARCH FUNCTIONALITY ====================
         const searchableItems = [
             // Destinations
-            { name: "Mambrui Sand Dunes", type: "Destination", price: "156,000", category: "destinations" },
-            { name: "Lake Naivasha", type: "Destination", price: "195,000", category: "destinations" },
-            { name: "Amboseli National Park", type: "Destination", price: "260,000", category: "destinations" },
-            { name: "Diani Beach", type: "Destination", price: "234,000", category: "destinations" },
-            { name: "Lamu Island", type: "Destination", price: "182,000", category: "destinations" },
-            { name: "Maasai Mara National Reserve", type: "Destination", price: "208,000", category: "destinations" },
-
-            // Packages
-            { name: "Karura Forest", type: "Package", price: "39,000", category: "packages" },
-            { name: "Hell's Gate National Park", type: "Package", price: "58,500", category: "packages" },
-            { name: "Aberdares National Park", type: "Package", price: "52,000", category: "packages" },
-            { name: "Menengai Crater", type: "Package", price: "71,500", category: "packages" },
-            { name: "Lake Naivasha,Naivasha", type: "Package", price: "45,500", category: "packages" },
-            { name: "Diani Beach", type: "Package", price: "78,000", category: "packages" },
+            { name: "Mombasa Yacht Party", type: "Destination", price: "11,599", category: "destinations" },
+            { name: "Njine Kabia Wild Swing and Bootcamp", type: "Destination", price: "5,499", category: "destinations" },
+            { name: "Samburu Buffalo Spring", type: "Destination", price: "9,999", category: "destinations" },
+            { name: "Nanyuki Jersey Edition", type: "Destination", price: "4,599", category: "destinations" },
+            { name: "Watamu and Malindi Road Trip", type: "Destination", price: "21,999", category: "destinations" },
+            { name: "Tafaria Castle Royal Edition", type: "Destination", price: "5,999", category: "destinations" },
+            { name: "Gen Z vs Millennial Hangout", type: "Destination", price: "4,999", category: "destinations" },
+            { name: "Namanga Jersey Edition", type: "Destination", price: "3,999", category: "destinations" },
+            { name: "Shooting Range", type: "Destination", price: "9,999", category: "destinations" },
+            { name: "Kartz Bitz Edition", type: "Destination", price: "4,999", category: "destinations" },
 
             // Services
             { name: "Safari Lodges", type: "Service", price: "From 8,500", category: "services" },
@@ -3480,15 +3608,15 @@
                 }
             });
 
-            // View All Packages button
+            // View All Trips button
             document.getElementById('viewPackagesBtn').addEventListener('click', function() {
                 const additionalPackages = document.getElementById('additionalPackages');
                 if (additionalPackages.classList.contains('active')) {
                     additionalPackages.classList.remove('active');
-                    this.textContent = 'View All Packages';
+                    this.textContent = 'View All Trips';
                 } else {
                     additionalPackages.classList.add('active');
-                    this.textContent = 'Show Less Packages';
+                    this.textContent = 'Show Less Trips';
                 }
             });
 
